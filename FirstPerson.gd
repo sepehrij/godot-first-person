@@ -5,7 +5,7 @@ var X = 0.00
 var Y = 0.00
 var speed = 0.2 #Player speed
 
-func _process(delta):
+func _fixed_process(delta):
 	#Player movement
 	if Input.is_key_pressed(KEY_W):
 		translate(Vector3(0, 0, -speed))
@@ -37,5 +37,5 @@ func _ready():
 	#Hide and capture mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	set_process(true)
+	set_fixed_process(true)
 	set_process_input(true)
